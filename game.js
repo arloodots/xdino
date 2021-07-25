@@ -15,7 +15,7 @@ var obstacleSecond = new Image();
 obstacleSecond.src = "cactus2.png";
 
 var flyingDino = new Image();
-flyingDino.src = "flyingdinosaur.PNG";
+flyingDino.src = "flyingdinosaur.png";
 
 //default functions
 function startGame() {
