@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Dino Game</title>
+<style>
+canvas{
+	background-image:url("dinobackground.png");
+	animation: animatedBackground 3s linear infinite;	
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -600px 0px;
+  }
+}
+
+  #main {
+    position: relative;
+    margin: 50px 0;
+  }
+
+  .output {
+    position: absolute;
+    top: 0;
+    left: 0;
+		/* display: none; */
+  }
+
+	video{
+		/* display: none; */
+	}
+
+  #description {
+    margin-top: 20px;
+    width: 600px;
+  }
+
+  #description-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body >
+	<canvas id="output" ></canvas>
+
+	<video id="video" playsinline style="
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		width: auto;
+		height: auto;
+		">
+	</video>
+		
+	<button onclick="sensitivity = sensitivity-2">-</button>
+	<button id="sensitivity" style="color:black;"></button>
+	<button onclick="sensitivity = sensitivity+2">+</button>
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+
+
+	<script src="ml.js"></script>
+	<script src="game.js"></script>
+</body>
+</html>
