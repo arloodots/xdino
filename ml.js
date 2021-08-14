@@ -3,7 +3,7 @@ let model, ctx, videoWidth, videoHeight, video, canvas;
 let position_check = []
 
 let jumpState = false;
-let sensitivity = 4
+let sensitivity = 2
 
 async function setupCamera() {
   video = document.getElementById('video');
